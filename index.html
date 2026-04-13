@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NanoVG Demos</title>
+    <style>
+        :root {
+            color: #191b1f;
+            background: #f7f7f4;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        main {
+            width: min(1040px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        h1,
+        h2,
+        p {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 32px;
+            line-height: 1.1;
+        }
+
+        h2 {
+            margin-top: 36px;
+            font-size: 18px;
+        }
+
+        .intro {
+            margin-top: 8px;
+            max-width: 620px;
+            color: #52575f;
+            line-height: 1.5;
+        }
+
+        .demo-card {
+            display: block;
+            margin-top: 22px;
+            overflow: hidden;
+            border: 1px solid #d7d9d3;
+            border-radius: 8px;
+            color: inherit;
+            background: #ffffff;
+            text-decoration: none;
+        }
+
+        .demo-card.main {
+            max-width: 512px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .demo-card:hover,
+        .demo-card:focus-visible {
+            border-color: #23856d;
+            outline: none;
+        }
+
+        .preview {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #deded8;
+        }
+
+        .demo-copy {
+            padding: 16px;
+        }
+
+        .demo-title {
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .demo-text {
+            margin-top: 6px;
+            color: #52575f;
+            line-height: 1.45;
+        }
+
+        .badge {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            padding: 2px 6px;
+            border-radius: 999px;
+            background: #f2b24a;
+            color: #2b1d00;
+        }
+
+        .demo-card.wip {
+            border-style: dashed;
+            background: #faf9f5;
+        }
+
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 720px) {
+            main {
+                width: min(100% - 24px, 1040px);
+                padding: 28px 0;
+            }
+
+            .theme-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .preview {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Themes</h2>
+        <div class="theme-grid">
+            <a class="demo-card" href="demos/neon-console/index.html">
+                <img class="preview" src="assets/previews/screencapture-neon-console.png" alt="Neon Console preview" />
+                <div class="demo-copy">
+                    <div class="demo-title">Neon Console</div>
+                    <p class="demo-text">A custom control panel theme with live controls and layered panels.</p>
+                </div>
+            </a>
+
+            <a class="demo-card" href="demos/controlkit/index.html">
+                <img class="preview" src="assets/previews/screencapture-controlkit.png" alt="ControlKit style preview" />
+                <div class="demo-copy">
+                    <div class="demo-title">ControlKit style</div>
+                    <p class="demo-text">A compact controller layout inspired by classic creative coding tools.</p>
+                </div>
+            </a>
+
+            <a class="demo-card" href="demos/antweakbar/index.html">
+                <img class="preview" src="assets/previews/screencapture-antweakbar.png" alt="AntTweakBar style preview" />
+                <div class="demo-copy">
+                    <div class="demo-title">AntTweakBar style</div>
+                    <p class="demo-text">Warm graphite tweak panels with compact controls and amber accents.</p>
+                </div>
+            </a>
+
+            <a class="demo-card wip" href="demos/imgui/index.html">
+                <img class="preview" src="assets/previews/screencapture-imgui.png" alt="ImGui style preview" />
+                <div class="demo-copy">
+                    <div class="demo-title">ImGui style <span class="badge">WIP</span></div>
+                    <p class="demo-text">Immediate-mode inspired panels with dark surfaces and blue active states.</p>
+                </div>
+            </a>
+
+            <a class="demo-card wip" href="demos/gwen/index.html">
+                <img class="preview" src="assets/previews/screencapture-gwen.png" alt="GWEN GUI style preview" />
+                <div class="demo-copy">
+                    <div class="demo-title">GWEN GUI style <span class="badge">WIP</span></div>
+                    <p class="demo-text">Bright skinned widgets with classic desktop panel contrast.</p>
+                </div>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

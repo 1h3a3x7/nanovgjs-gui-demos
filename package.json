@@ -1,0 +1,10 @@
+{
+  "name": "nanovgjs-gui-demos",
+  "private": true,
+  "dependencies": {
+    "nanovgjs": "^0.1.0"
+  },
+  "scripts": {
+    "dev": "npx http-server . -p 5173 -c-1"
+  }
+}
